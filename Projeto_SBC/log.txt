@@ -1,0 +1,105 @@
+<== Focus MAIN
+==> Focus MAIN
+MSG >> delete ED:1 (<Instance-initial-object>)
+HND >> delete primary in class USER
+       ED:1 (<Instance-initial-object>)
+<== instance [initial-object] of INITIAL-OBJECT
+HND << delete primary in class USER
+       ED:1 (<Stale Instance-initial-object>)
+MSG << delete ED:1 (<Stale Instance-initial-object>)
+<== f-0     (initial-fact)
+==> instance [initial-object] of INITIAL-OBJECT
+MSG >> create ED:1 (<Instance-initial-object>)
+HND >> create primary in class USER
+       ED:1 (<Instance-initial-object>)
+HND << create primary in class USER
+       ED:1 (<Instance-initial-object>)
+MSG << create ED:1 (<Instance-initial-object>)
+MSG >> init ED:1 (<Instance-initial-object>)
+HND >> init primary in class USER
+       ED:1 (<Instance-initial-object>)
+HND << init primary in class USER
+       ED:1 (<Instance-initial-object>)
+MSG << init ED:1 (<Instance-initial-object>)
+==> f-0     (initial-fact)
+==> f-1     (Arquitetura Distribuida)
+==> f-2     (Orcamento M)
+==> f-3     (Barramento M)
+==> f-4     (Sincronizacao N)
+==> f-5     (Integracao N)
+==> f-6     (Malha Controle N)
+==> f-7     (Strain 34)
+==> f-8     (Temperatura 2)
+==> f-9     (Som_Vibracao 34)
+==> f-10    (Encoder 12)
+==> f-11    (Corrente_Entrada 12)
+==> f-12    (Tensao_Entrada 11)
+==> f-13    (Digital_Entrada 5)
+==> f-14    (Corrente_Saida 4)
+==> f-15    (Tensao_Saida 34)
+==> f-16    (Digital_Saida 23)
+==> f-17    (Fase Inferencia_PL)
+==> Activation 0      R_ARC_D: f-17,f-1
+R_ARC_C
+R_ARC_D
+R_ARC_E
+R_OC_P
+R_OC_M
+R_OC_G
+R_OC_V
+R_BR_P
+R_BR_M
+R_BR_V
+R_BR_G
+For a total of 11 defrules.
+FIRE    1 R_ARC_D: f-17,f-1
+==> f-18    (Plataforma CDAQ)
+==> Activation 0      R_BR_M: f-17,f-18,f-3
+==> Activation 0      R_OC_M: f-17,f-18,f-2,f-1
+==> f-19    (Plataforma CRIO)
+==> Activation 0      R_BR_M: f-17,f-19,f-3
+==> Activation 0      R_OC_M: f-17,f-19,f-2,f-1
+==> f-20    (Plataforma PXI)
+==> Activation 0      R_BR_M: f-17,f-20,f-3
+==> Activation 0      R_OC_M: f-17,f-20,f-2,f-1
+FIRE    2 R_OC_M: f-17,f-20,f-2,f-1
+<== f-20    (Plataforma PXI)
+<== Activation 0      R_BR_M: f-17,f-20,f-3
+<== f-1     (Arquitetura Distribuida)
+<== Activation 0      R_OC_M: f-17,f-19,f-2,f-1
+<== Activation 0      R_OC_M: f-17,f-18,f-2,f-1
+FIRE    3 R_BR_M: f-17,f-19,f-3
+<== f-19    (Plataforma CRIO)
+<== f-3     (Barramento M)
+<== Activation 0      R_BR_M: f-17,f-18,f-3
+==> f-21    (Plataforma CRIO)
+==> f-22    (Barramento Ethernet)
+<== Focus MAIN
+3 rules fired
+19 mean number of facts (21 maximum).
+1 mean number of instances (1 maximum).
+2 mean number of activations (6 maximum).
+DFN >> factstostring ED:1 ()
+DFN << factstostring ED:1 ()
+DFN >> teste ED:1 ()
+DFN << teste ED:1 ()
+f-0     (initial-fact)
+f-2     (Orcamento M)
+f-4     (Sincronizacao N)
+f-5     (Integracao N)
+f-6     (Malha Controle N)
+f-7     (Strain 34)
+f-8     (Temperatura 2)
+f-9     (Som_Vibracao 34)
+f-10    (Encoder 12)
+f-11    (Corrente_Entrada 12)
+f-12    (Tensao_Entrada 11)
+f-13    (Digital_Entrada 5)
+f-14    (Corrente_Saida 4)
+f-15    (Tensao_Saida 34)
+f-16    (Digital_Saida 23)
+f-17    (Fase Inferencia_PL)
+f-18    (Plataforma CDAQ)
+f-21    (Plataforma CRIO)
+f-22    (Barramento Ethernet)
+For a total of 19 facts.
